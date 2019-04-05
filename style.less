@@ -1,0 +1,385 @@
+@import "colorscheme.less";
+@import "helper.less";
+@import "mixins.less";
+
+.container {
+    .position(absolute, 0, 0, 0, 0);
+    .ffbasic();
+    .display(contents);
+}
+#nav {
+    height: 1000px;
+    color: #87919d;
+    font-size: 11px;
+    width: 90px;
+
+    float:@left;
+    .textAlign(center);
+    border-right: 2px solid #282b34;
+    color:#colors[light];
+    .boxShadow(11px, 11px, 13px, 7px, #9d9ea1);
+    background-color: #colors[secondary];
+
+    ul {
+        .list-style();
+        font-weight:@bold;
+        letter-spacing: 0.9px;
+        li {
+            line-height: 15px;
+            .pad(18, 18, 18, 18);
+        }
+        & > li:first-child {
+            background-color:#colors[danger];
+            color:#colors[white];
+        }
+    }
+}
+#middle {
+    font-size: 11px;
+    width: 230px;
+    height: 1000px;
+    float:@left;
+    color:#colors[light];
+    .textAlign(center);
+    background-color: #colors[grey];
+
+    .filter {
+        .textAlign(left);
+        .pad(15, 15, 15, 15);
+        .mar(20, 0, 0, 0);
+        span {
+            .pad(15, 15, 15, 15);
+            i {
+                float:@right;
+            }
+        }
+    }
+
+    div:last-child {
+        .pad(15, 15, 15, 15);
+        div:first-child {
+            .mar(0, 0, 0, 0);
+        }
+        div:not(:first-child):not(:last-child) {
+            .mar(20, 0, 20, 0);
+        }
+        div:last-child {
+            .mar(20, 0, 0, 0);
+            .pad(0, 0, 0, 0);
+        }
+        ul {
+            .list-style(); 
+            line-height: 28px;
+            li {
+                .textAlign(left);
+                .pad(0, 15, 0, 15);
+                .borderRadius(3px);
+                span {
+                    float:@right;
+                }
+            }
+            & > li:first-child {
+                color:#colors[white];
+            } 
+            & > .slected {
+                background-color:#colors[dgray];
+            }
+        }
+    }
+}
+#main {
+    float:@left;
+    width: 1118px;
+
+    header {
+        .pad(19, 20, 50, 20);
+        button {
+            i {
+                vertical-align: middle;
+            }
+            .borderRadius(30px);
+            padding:5px;
+            width: 195px;
+            border:#colors[success];
+            background-color:#colors[success];
+            color:#colors[white];
+            float:@left;
+        }
+        div ul {
+            float:@right;
+            .list-style();
+            .display(flex);
+            color:#colors[light];
+            li {
+                padding-right: 20px;
+                i {
+                    font-size:20px;
+                }
+            }
+        }
+    }
+    .part2 {
+        .display(flex);
+
+        > div {
+            width: 250px;
+            border: 1px solid #e2e4e6;
+            background-color:#colors[gray];
+            padding: 10px;
+
+            > .p_icons i {
+                color:#colors[light];
+                font-size: 20px;
+            }
+
+            > div:last-child {
+                .textAlign(center);
+                margin-top: 20px;
+
+                > span:first-child {
+                    font-weight:@bold;
+                    margin-bottom: 30px;
+                    .display(block);
+
+                    > span:first-child {
+                        font-size: 30px;
+                        color: #7f848f;
+                    }
+
+                    > .prop {
+                        text-transform:uppercase;
+                        font-size: 12px;
+                        font-weight:@bold;
+                        color:#colors[light];
+                    }
+                }
+
+                > .date {
+                    font-size: 11px;
+                    margin-top: 30px;
+                    display: block;
+                    margin-bottom: 25px; 
+
+                    > span {
+                        font-weight:@bold;
+                        color:#colors[dark];
+                    }
+                }
+            }
+        } 
+    }
+
+    .part3 {
+        float:@left;
+        .inputWithIcon {
+            float:@left;
+            input[type=text] {
+                width: 100%;
+                border: 2px solid rgb(226,230,235);
+                .borderRadius(25px);
+                outline: none;
+                .pad(6, 6, 6, 6);
+                .mar(17, 48, 17, 48);
+                transition: 0.3s;
+            }
+        }
+        .sort {
+            float:@right;
+            .mar(10, 30, 0, 0);
+        }
+    }
+}
+.b-box {
+    border-right: 1px solid #colors[dg];
+}
+.b-box > div  {
+    clear: both;
+    padding: 22px 35px 22px 35px;
+    clear: both;
+    width: 767px;
+    box-sizing: border-box;
+    border: 1px solid #colors[dg];
+    height: 160px;
+
+    .circular {
+        .borderRadius(38px); 
+        float:@left; 
+
+        img {
+            .position(relative, 3px, 0, 0, 4px);
+        }
+    }
+
+    .mid_section {
+        float:@left;
+        position: relative; 
+        left: 50px; 
+        top: 5px;
+
+        > ul.sub {
+            .list-style();
+            .display(flex);
+            font-size:11px;
+            margin-top: 15px;
+            color: #colors[b]; 
+            letter-spacing: 0.6px;
+        }
+
+        > ul.subpart {
+            .list-style();
+            .display(flex);
+            font-size: 11px;
+            margin-top: 15px;
+
+            > li:first-child {
+                margin-right: 30px;
+            }
+            > li i {
+                font-size: 13px; 
+                vertical-align: bottom;
+                color: #00c0ff;
+            }
+            > li strong {
+                color: #colors[h];
+            }
+        }
+
+    }
+
+    .img_cond {
+        float:@right;
+
+        > ul {
+            .list-style();
+            .display(flex);
+            font-size: 12px;
+            margin-top: 7px;
+
+            > li button {
+                color:#colors[white]; 
+                .borderRadius(50px); 
+                padding: 2px 9px 2px 9px; 
+                text-transform: uppercase; 
+                font-size: 10px;
+            }
+
+            > li strong {
+                margin-left: 31px; 
+                font-size: 14px; 
+                margin-top: 1px; 
+                color: #5e6778;
+            }
+        }
+    }
+}
+
+.heading1 {
+    font-size: 13px;
+    color: #colors[h];
+
+    > span {
+        color: #colors[b];
+    }
+}
+
+.heading2 {
+    font-size: 11px;
+    color: #colors[b];
+    letter-spacing: 0.4px;
+    > span {
+        color: #00c0ff;
+    }
+}
+
+.talk-bubble {
+    margin: 15px;
+    .display(inline-block);
+    position: relative;
+    width: 235px;
+    height: auto;
+    background-color:#colors[s];
+    color: #colors[b];
+    border-radius: 6px;
+
+    .talktext {
+        padding: 11px;
+        .textAlign(left);
+        line-height: 1.5em;
+
+        p {
+            -webkit-margin-before: 0em;
+            -webkit-margin-after: 0em;
+            font-size: 11px;
+            line-height: 14px;
+        }
+    }
+}
+.tri-right.left-in:after {
+    content: ' ';
+    position: absolute;
+    .position(absolute, auto, auto, 26px, -14px);
+    width: 0;
+    height: 0;
+    border: 15px solid;
+    border-color: #colors[s] transparent transparent transparent;
+}
+
+.footer {
+    float:@right; 
+    border-left: 1px solid #colors[dg]; 
+    width: 345px;
+
+    .fsub {
+        .pad(0, 20, 0, 40);
+    }
+}
+button.check {
+    border-top-left-radius: 50px; 
+    border-bottom-left-radius: 50px;
+    border:1px solid #colors[dg];
+    .position(relative, 0, 0, 0, 5px);
+    background-color:#colors[info];
+    color:#colors[white];
+}
+button.close {
+    color:#colors[btn];
+    border:1px solid #colors[dg];
+    border-top-right-radius: 50px; 
+    border-bottom-right-radius: 50px;
+}
+.arrow_drop_down{
+    position: relative;
+    top: 8px;
+    left: 0px;
+    font-size: 22px;
+ }
+
+img.padding_left_30.padding_bottom_20 {
+    width:30px;
+}
+.text {
+    font-size:12px;
+    color:#colors[b];
+    .pad(25, 25, 25, 25);
+}
+.attach_file {
+    .pad(7, 15, 7, 15);
+    color:#colors[white];
+}
+.arrow-left {
+    float:@right;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #ccc;
+    transition: rota;
+    transform: rotate(140deg);
+    position: relative;
+    top: -12px;
+    left: 9px;
+}
+.scopy {
+    line-height: 43px;
+    color: #03A9F4;
+}
